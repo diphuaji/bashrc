@@ -1,0 +1,33 @@
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH="/opt/homebrew/opt/libtool/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/bin/:$PATH"
+export PATH=~/bin:$PATH
+export PATH=~/local/bin:$PATH
+export PATH=~/nvim/bin:$PATH
+export PATH=~/.pyenv/versions/2.7.18/bin/:$PATH
+export PATH=~/.pyenv/versions/3.9.18/bin/:$PATH
+export PATH=$HOME/pws-1/ngts/ngts_dev_tools/bin:$PATH
+
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
+unset AWS_SECURITY_TOKEN
+unset AWS_PROFILE
+unset AWS_DEFAULT_PROFILE
+unset AWS_DEFAULT_REGION
+unset AWS_REGION
+unset AWS_CREDENTIAL_EXPIRATION
+
+export AWS_PROFILE=sigfig-development
+`aws configure export-credentials --format env`
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias pyunit='python -m unittest'
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
+
+source ~/aliases.sh
