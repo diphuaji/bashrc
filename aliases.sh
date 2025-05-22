@@ -1,4 +1,3 @@
-#!/bin/bash
 alias dcom='docker compose'
 alias ll='ls -l'
 alias pyunit='python -m unittest'
@@ -13,4 +12,20 @@ alias gs='git status'
 alias ga='git add'
 alias gr='git rm'
 alias gcm='git commit -m'
-alias glog='git log'
+alias gstash='git stash'
+
+function _ave() {
+    PROFILE=$1
+    shift
+    aws-vault exec $PROFILE aws -- "$@"
+}
+
+function _avrun() {
+    PROFILE=$1
+    shift
+    aws-vault exec $PROFILE -- "$@"
+}
+
+alias av='aws-vault'
+alias ave='_ave'
+alias avrun='_avrun '
