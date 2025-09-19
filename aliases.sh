@@ -13,6 +13,7 @@ alias ga='git add'
 alias gr='git rm'
 alias gcm='git commit -m'
 alias gstash='git stash'
+alias glog='git log'
 
 function _ave() {
     PROFILE=$1
