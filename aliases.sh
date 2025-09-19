@@ -14,6 +14,7 @@ alias gr='git rm'
 alias gcm='git commit -m'
 alias gstash='git stash'
 alias glog='git log'
+alias glogone='git log --pretty=oneline'
 
 function _ave() {
     PROFILE=$1
