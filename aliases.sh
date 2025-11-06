@@ -15,6 +15,7 @@ alias gcm='git commit -m'
 alias gstash='git stash'
 alias glog='git log'
 alias glogone='git log --pretty=oneline'
+alias grdel='f() { git push origin --delete "$1"; }; f'
 
 function _ave() {
     PROFILE=$1
